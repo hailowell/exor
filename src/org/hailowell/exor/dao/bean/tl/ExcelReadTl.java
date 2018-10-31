@@ -28,4 +28,6 @@ public abstract class ExcelReadTl implements Serializable {
     public abstract void put(int index, String key, String value);
     public abstract int length();
     public abstract boolean isEmpty();
+    public abstract void remove(int index);
+    public abstract void clear();
 }

@@ -1,9 +1,6 @@
 package org.hailowell.exor.dao.bean.tl;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * 存储数据结构
@@ -149,5 +146,19 @@ public class VerticalExcelReadTl extends ExcelReadTl {
             return data.isEmpty();
         }
         return false;
+    }
+
+    @Override
+    public void remove(int index) {
+        Iterator<Map.Entry<String, List<String>>> iterator = data.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<String, List<String>> entry = iterator.next();
+            entry.getValue().remove(index);
+        }
+    }
+
+    @Override
+    public void clear() {
+        data.clear();
     }
 }

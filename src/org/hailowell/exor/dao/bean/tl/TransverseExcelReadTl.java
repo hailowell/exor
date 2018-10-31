@@ -111,4 +111,14 @@ public class TransverseExcelReadTl extends ExcelReadTl {
         }
         return false;
     }
+
+    @Override
+    public void remove(int index) {
+        data.remove(index);
+    }
+
+    @Override
+    public void clear() {
+        data.clear();
+    }
 }
