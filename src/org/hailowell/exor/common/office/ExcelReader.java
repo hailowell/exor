@@ -30,7 +30,7 @@ public class ExcelReader {
             Workbook workbook = getWorkBook(filePath);
             Sheet sheet = workbook.getSheet(rule.getSheetName());
             readTitle(sheet, rule);
-            ExcelReadTl readTl = ExcelReadTl.getInstance(ExcelReadTl.TlMode.vertical);
+            ExcelReadTl readTl = ExcelReadTl.getInstance(rule.getMode());
             readContent(sheet, rule, readTl);
             msg.successMsg(readTl);
         } catch (IOException e) {

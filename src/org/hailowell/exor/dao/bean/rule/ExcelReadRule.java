@@ -1,6 +1,7 @@
 package org.hailowell.exor.dao.bean.rule;
 
 import org.hailowell.exor.dao.bean.title.ExcelReadTitle;
+import org.hailowell.exor.dao.bean.tl.ExcelReadTl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +17,7 @@ public class ExcelReadRule {
     private List<String> titleNames = new ArrayList<String>();
     private List<CellValueMode> titleMode = new ArrayList<CellValueMode>();
     private List<ExcelReadTitle> colTitles = new ArrayList<ExcelReadTitle>();
+    private ExcelReadTl.TlMode mode = ExcelReadTl.TlMode.vertical;
 
     public String getSheetName() {
         return sheetName;
@@ -88,5 +90,13 @@ public class ExcelReadRule {
         int var1 = titleNames.indexOf(colName);
         title.setMode(titleMode.get(var1));
         colTitles.add(title);
+    }
+
+    public ExcelReadTl.TlMode getMode() {
+        return mode;
+    }
+
+    public void setMode(ExcelReadTl.TlMode mode) {
+        this.mode = mode;
     }
 }
