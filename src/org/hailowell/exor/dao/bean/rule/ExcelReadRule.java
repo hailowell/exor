@@ -93,7 +93,7 @@ public class ExcelReadRule {
     }
 
     public ExcelReadTl.TlMode getMode() {
-        return mode;
+        return this.mode;
     }
 
     public void setMode(ExcelReadTl.TlMode mode) {
