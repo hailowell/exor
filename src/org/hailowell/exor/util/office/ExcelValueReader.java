@@ -24,6 +24,7 @@ public class ExcelValueReader {
     public String readCellValue(Cell cell, CellValueMode mode) {
         String cellValue = "";
         if (null == cell) {
+            return cellValue;
         }
         switch (cell.getCellTypeEnum()) {
             case NUMERIC:
